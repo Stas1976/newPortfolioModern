@@ -1,9 +1,11 @@
 // Widescreen
 @include mediaXL {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 //Laptop
 @include mediaLg {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 //tablet
@@ -53,10 +55,11 @@
       "job1"
       "job2"
       "job3";
-    &img {
-      background: src("/dist/img/myPortrait150px.jpg");
-    }
+
     grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -64,5 +67,9 @@
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
